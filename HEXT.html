@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HEXT — Text to ASCII Banner Generator</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700;900&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+:root {
+  --bg: #070707;
+  --panel: #0f0f0f;
+  --muted: #9aa0a6;
+  --accent: #ff2e2e;
+  --accent-dim: #b03a3a;
+  --folder: #ff7a2b;
+  --mono: "Oswald";
+  --radius: 8px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, #050505 0%, #0b0b0b 100%);
+  color: var(--muted);
+  font-family: var(--mono), system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 28px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid rgba(255,0,0,0.06);
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,46,46,0.06), rgba(0,0,0,0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-family: Orbitron, monospace;
+  font-weight: 700;
+  font-size: 22px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.6), inset 0 -4px 10px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,46,46,0.06);
+}
+
+h1 {
+  font-family: Orbitron, var(--mono), sans-serif;
+  color: var(--accent);
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(176,0,0,0.06);
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--accent-dim);
+  margin-top: 4px;
+}
+
+main {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 22px;
+  align-items: start;
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,46,46,0.03);
+}
+
+.lead {
+  color: #dcdcdc;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h2 {
+  color: var(--accent);
+  margin: 0 0 10px 0;
+  font-family: Orbitron, var(--mono);
+}
+
+h3 {
+  color: #d8d8d8;
+  margin: 12px 0 8px;
+  font-size: 14px;
+}
+
+ul {
+  margin: 8px 0 16px 20px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.02);
+  color: var(--muted);
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.note {
+  background: linear-gradient(180deg, rgba(255,46,46,0.02), rgba(255,46,46,0.01));
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,46,46,0.03);
+  color: #e6dede;
+}
+
+footer {
+  margin-top: 28px;
+  text-align: center;
+  color: rgba(255,255,255,0.06);
+  font-size: 12px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,0,0,0.03);
+}
+
+.col-right {
+  position: sticky;
+  top: 24px;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--accent);
+  color: #111;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 12px;
+}
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">HX</div>
+  <div>
+    <h1>HEXT — Text to ASCII Banner Generator</h1>
+    <div class="subtitle">ASCII Art • pyfiglet Fonts • Banner Rendering</div>
+  </div>
+</header>
+
+<main>
+
+<!-- Left Main Section -->
+<div>
+
+  <section class="panel">
+    <p class="lead">
+      HEXT is a Python3 web application that converts text into ASCII banners using pyfiglet.<br> 
+      It features a modern, dark aesthetic interface with live font selection, copy and download functionality, 
+      and full-screen previews.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2>Version Information</h2>
+    <p><strong>Version:</strong> 2.0<br>
+       <strong>Author:</strong> K0NxT3D<br>
+       <strong>Website:</strong> <a href="http://www.seaverns.com/">seaverns.com</a></p>
+  </section>
+
+  <section class="panel">
+    <h2>Core Features</h2>
+
+    <h3>🖋 Text to ASCII</h3>
+    <ul>
+      <li>Render text using any installed pyfiglet font</li>
+      <li>Live preview with instant updates</li>
+      <li>Copy to clipboard or download as .txt</li>
+    </ul>
+
+    <h3>🎨 Font Selection</h3>
+    <ul>
+      <li>Dropdown menu for all available pyfiglet fonts</li>
+      <li>Sidebar font reference panel</li>
+      <li>Dynamic highlighting of selected font</li>
+    </ul>
+
+    <h3>💻 Web Interface</h3>
+    <ul>
+      <li>Dark hacker aesthetic layout</li>
+      <li>Responsive design for desktop and mobile</li>
+      <li>Clean two-column layout with sidebar</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Requirements</h2>
+    <ul>
+      <li>Python 3.12+ (tested on Ubuntu 24 & Raspberry Pi)</li>
+      <li>pip3 installed</li>
+    </ul>
+
+    <h3>Python Packages</h3>
+    <ul>
+      <li>Flask ≥ 2.3.2</li>
+      <li>pyfiglet ≥ 0.8.post1</li>
+    </ul>
+  </section>
+
+  <section class="panel">
+    <h2>Installation</h2>
+<pre class="note">
+
+cd HEXT
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+python3 hext.py
+</pre>
+  </section>
+
+  <section class="panel">
+    <h2>Usage</h2>
+    <h3>1) Launch Application</h3>
+<pre class="note">
+python3 hext.py
+</pre>
+
+    <h3>2) Open in Browser</h3>
+<pre class="note">
+http://127.0.0.1:22800/
+</pre>
+
+    <h3>3) Enter Text & Render</h3>
+<pre class="note">
+- Type text into the input field
+- Select a font from the dropdown
+- Click "Render"
+</pre>
+
+    <h3>4) Copy / Download</h3>
+<pre class="note">
+- Click "Copy" to clipboard
+- Click "Download" to save .txt file
+</pre>
+  </section>
+
+  <section class="panel">
+    <h2>License</h2>
+<pre>
+MIT License
+
+Copyright (c) 2025 Rob Seaverns
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”), to deal
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+copies of the Software, and to permit persons to whom the Software is  
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in  
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE  
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER  
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING  
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER  
+DEALINGS IN THE SOFTWARE.
+</pre>
+  </section>
+
+</div>
+
+<!-- Right Sidebar -->
+<div class="col-right">
+
+  <section class="panel">
+    <h2>Metadata</h2>
+    <p class="meta">Status: Active</p>
+    <p class="meta">Python: 3.12+</p>
+    <p class="meta">Platform: Linux / Raspberry Pi</p>
+    <p class="meta">License: MIT</p>
+
+    <a class="cta" href="http://www.seaverns.com/hext-2-0-text-to-ascii-banner-generator/">
+      Visit Project Page
+    </a>
+    <a class="cta" href="HEXT_2.0.zip">
+      Download &nbsp; Source
+    </a>
+  </section>
+
+  <section class="panel">
+    <h2>Tags</h2>
+    <span class="tag">ASCII</span>
+    <span class="tag">pyfiglet</span>
+    <span class="tag">Text</span>
+    <span class="tag">Banner</span>
+    <span class="tag">Python3</span>
+    <span class="tag">Web App</span>
+  </section>
+
+  <section class="panel">
+    <h2>Available Fonts</h2>
+    <span class="tag">standard</span>
+    <span class="tag">slant</span>
+    <span class="tag">block</span>
+    <span class="tag">doom</span>
+    <span class="tag">digital</span>
+    <span class="tag">banner</span>
+    <span class="tag">big</span>
+    <!-- Add more fonts as needed -->
+  </section>
+
+</div>
+
+</main>
+
+<footer>
+  HEXT &copy; 2025 — K0NxT3D • ASCII Banner Generator
+</footer>
+
+</div>
+</body>
+</html>
+
